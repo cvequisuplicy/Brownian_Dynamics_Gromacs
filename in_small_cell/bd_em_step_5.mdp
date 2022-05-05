@@ -1,0 +1,30 @@
+ld-seed     = -1      ; Use random seed 
+;################################# INTEGRATOR ##################################
+integrator  = bd        ; Langevin thermostat
+dt          = 100000    ; Timestep (ps)
+nsteps      = 30000000    ; Simulation duration (timesteps)
+nstcomm     = 1000      ; Center of mass motion removal interval
+comm-mode   = linear    ; Center of mass motion removal mode
+bd_fric     = 0        ; 
+;################################## ENSEMBLE ###################################
+ref_t       = 295  295      ; System temperature (K)
+tau_t       = 684  1.75     ; Thermostat time constant (ps)
+tc_grps     = LUV  Fab    ; Apply thermostat to complete system
+;########################### NONBONDED INTERACTIONS ############################
+cutoff_scheme = Verlet  ; Method of managing neighbor lists
+pbc           = xyz     ; Periodic Boundary Conditions in all directions
+coulombtype   = cut-off ; Calculate coulomb interactions using PME
+rcoulomb      = 50    ; Coulomb cutoff 
+vdwtype       = cut-off ; Calculate van der Waals interactions using PME
+vdw-modifier =  Potential-shift ; 
+rvdw          = 50      ; Van der Waals cutoff 
+rlist         = 50      ; Neighbor list cutoff
+nstlist       = 100      ; 
+;################################### OUTPUT ####################################
+nstlog        = 10000       ; Log output interval (timesteps)
+nstenergy     = 10000     ; Energy output interval (timesteps)
+nstcalcenergy = 10000      ; Energy calculation interval (timesteps)
+nstxout       = 0      ; Trajectory output interval (timesteps)
+nstvout       = 10000      ; Velocity outout interval (timesteps)
+nstfout       = 0      ; Force output interval (timesteps)
+nstxout-compressed = 10000  ;

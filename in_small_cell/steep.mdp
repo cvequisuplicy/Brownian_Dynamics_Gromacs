@@ -1,0 +1,30 @@
+; minimiza.mdp - used as input into grompp to generate outMinimiza.tpr (minimization)
+; File 'minimiza.mdp' was created by Lupe Villegas (lupevillegaslopez@gmail.com)
+; Run control
+integrator               = l-bfgs       ; steepest descent algorithm for energy minimization
+emtol                    = 0.000001        ; Stop minimization when the maximun force <0.001 kJ/mol/nm
+emstep                   = 1          ; 0.1 nm initial step-size (steepest descent step size) 
+nsteps                   = 500000        ; Maximum number of (minimization) steps to perform
+nbfgscorr = 1000
+;################################## ENSEMBLE ###################################
+ref_t       = 295  295      ; System temperature (K)
+tau_t       = 684  1.75     ; Thermostat time constant (ps)
+tc_grps     = LUV  Fab    ; Apply thermostat to complete system
+;########################### NONBONDED INTERACTIONS ############################
+cutoff_scheme = Verlet  ; Method of managing neighbor lists
+pbc           = xyz     ; Periodic Boundary Conditions in all directions
+coulombtype   = cut-off ; Calculate coulomb interactions using PME
+rcoulomb      = 50    ; Coulomb cutoff 
+vdwtype       = cut-off ; Calculate van der Waals interactions using PME
+vdw-modifier =  Potential-shift ; 
+rvdw          = 50      ; Van der Waals cutoff 
+rlist         = 50      ; Neighbor list cutoff
+nstlist       = 100      ; 
+;################################### OUTPUT ####################################
+nstlog        = 10000       ; Log output interval (timesteps)
+nstenergy     = 10000     ; Energy output interval (timesteps)
+nstcalcenergy = 10000      ; Energy calculation interval (timesteps)
+nstxout       = 0      ; Trajectory output interval (timesteps)
+nstvout       = 10000      ; Velocity outout interval (timesteps)
+nstfout       = 0      ; Force output interval (timesteps)
+nstxout-compressed = 1000  ;

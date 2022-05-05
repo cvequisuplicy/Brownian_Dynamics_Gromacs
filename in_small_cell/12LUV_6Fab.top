@@ -1,0 +1,12 @@
+;   Topology of 6 Fab molecules with 12 LUV
+
+#include "solidParticlesr.itp"
+     
+[ system ]
+; system name
+6 Fab molecules with 12 LUV 
+
+[ molecules ]
+; molecule 	number
+LUV         12
+Fab 		6

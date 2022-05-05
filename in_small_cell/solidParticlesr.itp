@@ -1,0 +1,45 @@
+;   Topology of solid particles. 
+; No include forcefield parameters
+
+[ defaults ]
+; nb-type	combination-rule  gen-pairs   fudgeLJ     fudgeQQ
+1       1        no   
+
+[ atomtypes ]
+;type	mass    charge	ptype	c6           c12
+SA      1.03e+3     0.000   A   -3.76996e-05  4.299495e-09
+FA		4.8e+04     0.000   A   -2.43640e-01  1.692601e-08
+LA      3.0e+08     0.000   A   -1.38063e-00  1.069156e-04
+
+
+[nonbond_params]
+
+
+
+[ moleculetype ]
+;name   nrexcl
+Fab     1     ;   sigma=05nm  Epsilon= 0.6236 kJmol-1  mass= 48000 Da C12= 6.08984e+08 kJmol-1nm12
+
+[ atoms ]
+;   nr	      type  resnr  residu  atom    cgnr	    charge	mass
+     1	       FA      1	  Fab    FA      0       0.00    4.8e+04
+
+
+[ moleculetype ]
+;name   nrexcl
+LUV     1     ;    sigma=100nm  Epsilon= 0.6236 kJmol-1 mass= 3.0e+08 Da  C12= 2.49440e+24 kJmol-1nm12
+
+
+[ atoms ]
+;   nr        type  resnr  residu  atom    cgnr     charge  mass
+     1         LA      1      LUV   LA      0       0.00    3.0e+08     
+
+
+[ moleculetype ]
+;name   nrexcl
+SR     1     ;   sigma=03nm  Epsilon= 0.6236 kJmol-1  mass= 1029 Da C12= 1.32563e+06 kJmol-1nm12
+
+[ atoms ]
+;   nr	      type  resnr  residu  atom    cgnr	    charge	mass
+     1	       SA      1	  SR    SA      0       0.00    1.02914e+03
+
