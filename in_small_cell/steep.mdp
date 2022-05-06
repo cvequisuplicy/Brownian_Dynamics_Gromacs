@@ -1,5 +1,3 @@
-; minimiza.mdp - used as input into grompp to generate outMinimiza.tpr (minimization)
-; File 'minimiza.mdp' was created by Lupe Villegas (lupevillegaslopez@gmail.com)
 ; Run control
 integrator               = l-bfgs       ; steepest descent algorithm for energy minimization
 emtol                    = 0.000001        ; Stop minimization when the maximun force <0.001 kJ/mol/nm
