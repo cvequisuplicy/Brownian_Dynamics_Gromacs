@@ -6,7 +6,7 @@
 1       1        no   
 
 [ atomtypes ]
-;type	mass    charge	ptype	c6           c12
+;type	mass    charge	ptype	c6 kJmol-1nm6   c12 kJmol-1nm12
 SA      1.03e+3     0.000   A   -3.76996e-05  4.299495e-09
 FA		4.8e+04     0.000   A   -2.43640e-01  1.692601e-08
 LA      3.0e+08     0.000   A   -1.38063e-00  1.069156e-04
@@ -18,7 +18,7 @@ LA      3.0e+08     0.000   A   -1.38063e-00  1.069156e-04
 
 [ moleculetype ]
 ;name   nrexcl
-Fab     1     ;   sigma=05nm  Epsilon= 0.6236 kJmol-1  mass= 48000 Da C12= 6.08984e+08 kJmol-1nm12
+Fab     1     ;     mass= 48000 Da kJmol-1nm12
 
 [ atoms ]
 ;   nr	      type  resnr  residu  atom    cgnr	    charge	mass
@@ -27,7 +27,7 @@ Fab     1     ;   sigma=05nm  Epsilon= 0.6236 kJmol-1  mass= 48000 Da C12= 6.089
 
 [ moleculetype ]
 ;name   nrexcl
-LUV     1     ;    sigma=100nm  Epsilon= 0.6236 kJmol-1 mass= 3.0e+08 Da  C12= 2.49440e+24 kJmol-1nm12
+LUV     1     ;     mass= 3.0e+08 Da  
 
 
 [ atoms ]
